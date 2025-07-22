@@ -1,0 +1,131 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(219, 117, 48, 0.952); 
+    width: 100%;
+    height: 75px;
+}
+
+header ul {
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+header ul li {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    color: rgb(253, 250, 250);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    list-style: none;
+    align-content: center;
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+}
+
+a{
+    text-decoration:none !important;
+    text-decoration-line: none !important;
+    align-items: center;
+    margin: 6px;
+    padding: 6px;
+}
+
+img {
+    width: 75px;
+}
+
+.contenedor img {
+    width: 150px; 
+    height: 150px;  
+}
+
+h1 {font-size: 20px; 
+    color: rgb(48, 47, 47);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+p{  font-size: 17px;
+    color: rgb(44, 44, 44);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content:space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    text-decoration: none;
+    background-color: whitesmoke;
+    margin: 10px 0 10 px 0
+}
+
+.caja {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content:flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.caja img {
+    border-radius: 50%;
+    aspect-ratio:unset;
+    border: 6px solid rgba(219, 178, 150, 0.952);
+    border-radius: 50%;
+    border-style:groove;
+}
+.caja p {
+    font-size: 20;
+}
+
+#ubicacion{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+#ubicacion iframe{
+    padding: 10px;
+    margin: 10px;    
+}
+
+#fotos {
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  height: 400px;
+  width: 38%;
+  padding: 20px;
+  margin: 20px;
+}
+
+.carousel-inner img {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 70px;
+}
+
+.carousel-item img {
+   display: flex;
+   flex-direction: row;
+   height: 400px;
+   width: 70px;
+}
