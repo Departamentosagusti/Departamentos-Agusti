@@ -1,10 +1,19 @@
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(44, 44, 44);
+    background-color: #f8f8f8;
+}
+
 header{
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     background-color: rgba(219, 117, 48, 0.952); 
     width: 100%;
-    height: 75px;
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 header ul {
@@ -15,25 +24,15 @@ header ul {
     text-decoration-line: none;
 }
 
-header ul li {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    color: rgb(253, 250, 250);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 20px;
-    list-style: none;
-    align-content: center;
-    text-decoration: none !important;
-    text-decoration-line: none !important;
+ul {
+    padding: 0;
+    margin: 0;
 }
 
 a{
     text-decoration:none !important;
     text-decoration-line: none !important;
-    align-items: center;
-    margin: 6px;
-    padding: 6px;
+    color: inherit;
 }
 
 img {
@@ -43,156 +42,239 @@ img {
     align-items: center;
 }
 
+.logo img {
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+
 .contenedor img {
     width: 150px; 
     height: 150px;  
     align-items: center;
 }
 
-h1 {font-size: 20px; 
+h1 {font-size: 2rem; 
     color: rgb(48, 47, 47);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
     display: flex;
     flex-direction:row;
+    text-align: center;
+    margin-bottom: 20px;
     justify-content: center;
 }
 
-p{  font-size: 17px;
+h3{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p{  font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
     color: rgb(44, 44, 44);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
     display: flex;
     flex-direction: row;
-    margin: 10px;
-    justify-content:space-around;
-    align-items: center;
-    align-content: center;
+    margin: 10px 0;    
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 15px; 
+}
+
+nav ul a {
+    color: rgb(253, 250, 250);
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+}
+
+nav ul a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 .contenedor {
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
     text-decoration: none;
     background-color: whitesmoke;
-    margin: 10px 0 10 px 0;
+    gap: 20px;
     padding: 20px;
 }
 
 .caja {
+    flex: 1 1 280px;
     display: flex;
-    width: 100%;
-    height: 100%;
+    max-width: 350px;
     justify-content:flex-start;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 20px;
     background: linear-gradient(#f5cc98, #f8d9aa);
     border-style: ridge;
+    border: 2px solid rgba(219, 178, 150, 0.952);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .caja img {
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
     aspect-ratio:unset;
-    border: 6px solid rgba(219, 178, 150, 0.952);
+    border: 6px groove rgba(219, 178, 150, 0.952);
     border-radius: 50%;
-    border-style:groove;
+    object-fit: cover;
 }
 .caja p {
-    font-size: 20;
+    font-size: 1rem;
 }
 
-#servicios{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; 
-    margin: 20px; 
-    border: ridge;
-}
-
-#equipamiento {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.contenedor-ubicacion, .contenedor-servicios, .contenedor-equipamiento {
     padding: 20px;
-    margin: 20px; 
-    border-style: ridge;
-    }
+    margin: 20px auto;
+    max-width: 1200px; 
+    box-sizing: border-box;
+}
 
+#ubicacion, #servicios, #equipamiento, #sp, #contacto {
+    border: 2px ridge #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
 
-#ubicacion{
+.direccion h3 {
+    margin: 10px 0;
+}
+
+#mapa iframe, #sanpedro iframe {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    padding: 20px;
-    margin: 20px;
-    border-style: ridge;
+    max-width: 560px; 
+    height: 315px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
 }
 
-#ubicacion iframe{
-    padding: 10px;
-    margin: 10px;   
+.lista, .lista-lugares, .lista-act {
+    text-align: left;
+    max-width: 600px;
+    margin: 15px auto;
 }
 
-#sp{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    border-style: ridge;
-    padding: 20px;
-    margin: 20px;
+.lista li, .lista-lugares li, .lista-act li {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
 }
-
-#sanpedro iframe{
-    padding: 10px;
-    margin: 10px;    
-}
-
-#servicios{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-}
-
-#contacto{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    align-content: center;
-    border-style: ridge;
-    padding: 20px;
-    margin: 20px;
-}
-
-
 
 #fotos {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  height: 100%;
-  width: 38%;
-  padding: 20px;
-  margin: 20px;
+    max-width: 80%; /* Ajusta el ancho del carrusel */
+    margin: 20px auto;
 }
 
 .carousel-inner img {
-    display: flex;
-    flex-direction: row;
-    height: 300px;
-    width: 70px;
+    max-height: 500px; /* Limita la altura de las imágenes en el carrusel */
+    width: auto;
+    margin: 0 auto;
+    object-fit: cover;
 }
 
-.carousel-item img {
-   display: flex;
-   flex-direction: row;
-   height: 300px;
-   width: 70px;
+#contacto .datos {
+    margin-top: 20px;
 }
 
+#contacto p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(219, 117, 48, 0.952);
+    color: white;
+    margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+    /* Estilos para tabletas */
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    header {
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul a {
+        font-size: 1rem;
+        padding: 5px 8px;
+    }
+
+    #fotos {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para móviles */
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    nav ul a {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .caja {
+        flex: 1 1 100%; /* Cada caja ocupa todo el ancho */
+        max-width: none;
+    }
+    
+    #fotos {
+        max-width: 100%;
+    }
+}
